@@ -1,0 +1,169 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "cherryrockstudios.listo.MainController#saveFile(File)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "cherryrockstudios.listo.MainController",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_102982545 { 
+   	label=listo
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1102070209 { 
+   	label=unit
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_190160133 { 
+   	label=Project
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Project971874320XXXsaveCount0[
+	label="+ saveCount()"
+	style=filled
+	fillcolor=white
+	tooltip="Project
+
+&#10;  Returns the count so numbering will make sense once loaded&#10; &#10;  @return the count value as String&#10; "
+	fontcolor=darkgreen
+];
+
+Project971874320XXXsaveFormat0[
+	label="+ saveFormat()"
+	style=filled
+	fillcolor=white
+	tooltip="Project
+
+&#10;  Returns a format of the project that will be stored in the output file&#10; &#10;  @return a comma-separated values about the project&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_884601869 { 
+   	label=Listo
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Listo971874320XXXsaveFormat0[
+	label="+ saveFormat()"
+	style=filled
+	fillcolor=white
+	tooltip="Listo
+
+&#10;  Returns a format of the listo that will be stored in the output file&#10; &#10;  @return a comma-separated values about the Listo&#10; "
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_74739137 { 
+   	label=MainController
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MainController477830142XXXsaveFile2189724[
+	label="+ saveFile()"
+	style=filled
+	fillcolor=white
+	tooltip="MainController
+
+&#10;  HELPER METHOD&#10;  writes data into the selected output file (fileToSave) using PrintWriter&#10; &#10;  @param fileToSave: the File where data shall be saved&#10;  @return true if saved file successfully, else false.&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Listo971874320XXXsaveFormat0 -> Project971874320XXXsaveCount0;
+Listo971874320XXXsaveFormat0 -> Project971874320XXXsaveFormat0;
+MainController477830142XXXsaveFile2189724 -> Listo971874320XXXsaveFormat0;
+    
+}
+@enduml

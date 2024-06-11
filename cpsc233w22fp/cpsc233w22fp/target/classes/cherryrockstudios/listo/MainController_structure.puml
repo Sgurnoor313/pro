@@ -1,0 +1,288 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "cherryrockstudios.listo.MainController",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_102982545 { 
+   	label=listo
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   MainController477830142[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MainController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   IDColumn: TableColumn&lt;Project, Integer&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   aboutListoMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   aboutMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   courseColumn: TableColumn&lt;Project, String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   courseNameAddButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   courseNameTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   createLabelHeader: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   createProjectButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   currentCountLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deleteCourseButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deleteCourseChoiceBox: ChoiceBox&lt;String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deleteListoMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deleteProjectButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   descColumn: TableColumn&lt;Project, String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   descViewArea: TextArea [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   dueColumn: TableColumn&lt;Project, LocalDate&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   dueDateTextfield: DatePicker [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   editListoMenuBar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   editProjectButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   edit_project: Project [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   formatColumn: TableColumn&lt;Project, FormatType&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   gradeColumn: TableColumn&lt;Project, Double&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listoNameLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listo_createListoButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listo_listoAuthorTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listo_listoDescTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listo_listoLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listo_listoNameTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   loadListoMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   newListoMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectColumn: TableColumn&lt;Project, String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectCourseChoiceBox: ChoiceBox&lt;String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectDescriptionTextfield: TextArea [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectFormatChoiceBox: ChoiceBox&lt;FormatType&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectGradeWeightTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectNameTextfield: TextField [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectStatusChoiceBox: ChoiceBox&lt;StatusType&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   quitMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   saveAsMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   saveChangesButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   saveMenubar: MenuItem [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   statusColumn: TableColumn&lt;Project, StatusType&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   statusLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   todaysDateLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   updateStatusButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   updateStatusChoiceBox: ChoiceBox&lt;StatusType&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   viewDescSelectButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   viewListoTable: TableView&lt;Project&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ EDIT_FILE()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ EDIT_PROJ()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ LOAD_FILE()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ NEW_FILE()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ NO_FILE()</TD></TR>
+<TR><TD ALIGN="LEFT" ># aboutAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># aboutListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># addCourseAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># createListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># createProjectAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># deleteCourseAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># deleteListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># deleteProjectAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># editListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># editListo_createListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># editProjectAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ initialize()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ invalidInputAlert(message: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># loadListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ loadListoWithWarning()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ loadListoWithoutWarning()</TD></TR>
+<TR><TD ALIGN="LEFT" ># newListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># newListo_createListoAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># quitAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readFile(fileToLoad: File): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" ># saveAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># saveAsAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># saveChangesAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ saveFile(fileToSave: File): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ showListoSector(bool: boolean)</TD></TR>
+<TR><TD ALIGN="LEFT" ># updateStatusAction(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateStatusBasedToday()</TD></TR>
+<TR><TD ALIGN="LEFT" ># viewDescAction(event: ActionEvent)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+subgraph cluster_1102070209 { 
+   	label=unit
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Listo971874320[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Listo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   courseList: ArrayList&lt;String&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   dateCreated: LocalDate [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listoDescription: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listoName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listoProjects: ArrayList&lt;Project&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listoUserName: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addCourse(course: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addProject(project: Project)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteCourse(course: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteProject(project: Project)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getProject(index: int): Project</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getProjectByID(projectID: int): Project</TD></TR>
+<TR><TD ALIGN="LEFT" >+ saveFormat(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ viewListo(isBasicView: boolean): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Project971874320[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Project</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   gradeWeight: Double [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectCourse: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectDescription: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectDue: LocalDate [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectFormat: FormatType [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectID: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   projectStatus: StatusType [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ saveCount(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ saveFormat(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateCount(newCount: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1102075967 { 
+   	label=util
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Reader971868562[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Reader</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ loadFile(inputFile: File): Listo</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Listo971874320 -> Project971874320[label="listoProjects
+[0..*]"];
+MainController477830142 -> Project971874320[label="IDColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="courseColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="descColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="dueColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="edit_project
+[0..1]"];
+MainController477830142 -> Project971874320[label="formatColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="gradeColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="projectColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="statusColumn
+[0..1]"];
+MainController477830142 -> Project971874320[label="viewListoTable
+[0..1]"];
+MainController477830142 -> Reader971868562[label="readFile() -> loadFile()"];
+Reader971868562 -> Project971874320[label="loadFile() -> updateCount()"];
+    
+}
+@enduml

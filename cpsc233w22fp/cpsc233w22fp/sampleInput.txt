@@ -1,0 +1,24 @@
+Winter 2022
+Gabriel Rodriguez
+2022-01-02
+my winter academic projects :)
+#$!?-courses-?!$#
+CPSC 233
+MATH 267
+CPSC 251
+PHIL 279
+STAT 213
+#$!?-projects-?!$#
+1,CPSC 233,Assignment 1,2022-03-12,COMPLETED,ASSIGNMENT,10.0,TicTacToe
+2,CPSC 251,Midterm 2,2022-03-14,COMPLETED,MIDTERM,10.0,Study for this!!!
+3,MATH 267,Assignment 2,2022-03-01,IN_PROGRESS,ASSIGNMENT,6.0,WebWork
+4,STAT 213,Assignment 1,2022-03-03,POSTPONED,ASSIGNMENT,21.0,WebWork
+5,MATH 267,Lab Task 7,2022-04-02,CANCELLED,LAB_TASK,12.0,Double Integrals
+6,MATH 267,Assignment 3,2022-03-12,IN_PROGRESS,ASSIGNMENT,14.5,Taylor Series
+7,CPSC 233,Demo 2,2022-03-23,ACTIVE,GROUP_PROJECT,16.7,Object Oriented Program
+8,PHIL 279,Quiz 4,2022-02-27,ACTIVE,QUIZ,20.0,Natural Deduction Proofs
+9,CPSC 251,Assignment 4,2022-03-25,COMPLETED,ASSIGNMENT,6.0,Graph Theory
+10,PHIL 279,Problem Set 4,2022-03-01,ACTIVE,QUIZ,0.0,Ambiguity
+#$!?-count-?!$#
+11
+
