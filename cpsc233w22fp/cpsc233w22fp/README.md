@@ -1,9 +1,7 @@
 # Listo! Your Assistant in Academics.
 Version 1.3
 
-Developers: Gabriel Rodriguez, Sharoon Thabal
-
-This is a CPSC 233 Final Project. The project is a school work tracker inspired by the viral TikTok video 
+ The project is a school work tracker inspired by the viral TikTok video 
 that showcases how to manage your college workload using an excel sheet. With this app, you don't need to 
 know any spreadsheets to manage your college life!  Listo will be enough and the best pick for you!
 
